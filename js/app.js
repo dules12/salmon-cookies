@@ -1,9 +1,47 @@
 'use strict';
+var AllStores = [];
 
-//Only global variable, array made up of hours each store is opened
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-//Pike Place Store Object
+var storeTable = document.getElementById('stores');
+
+function Stores(minCustHour, maxCustHour, averageCookies,) {
+  this.minCustHour = minCustHour;
+  this.maxCustHour = maxCustHour; 
+  this.averageCookies = averageCookies;
+}
+
+Stores.prototype.renderRow = function () 
+{
+ 
+  var trElement = document.createElement('tr');
+  
+  
+  var tdElement = document.createElement('td');
+  
+  
+  tdElement.textContent = this.minCustHour;
+  
+ 
+  trElement.appendChild(tdElement);
+  
+  tdElement = document.createElement('td');
+  tdElement.textContent = this.maxCustHour;
+  trElement.appendChild(tdElement);
+  
+  tdElement = document.createElement('td');
+  tdElement.textContent = this.averageCookies;
+  trElement.appendChild(tdElement);
+  
+  
+  
+  storesTable.appendChild(trElement);
+};
+
+
+
+
+/* Pike Place Store Object
 var pikeStore = {
   minCustHour: 23,
   maxCustHour: 65,
@@ -170,4 +208,4 @@ pikeStore.generateList();
 seaTacStore.generateList();
 centerStore.generateList();
 capHillStore.generateList();
-alkiStore.generateList();
+ alkiStore.generateList(); */
