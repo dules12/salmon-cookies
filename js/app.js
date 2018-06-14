@@ -1,14 +1,28 @@
 'use strict';
-var AllStores = [];
-
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var allStores = [];
 
 var storeTable = document.getElementById('stores');
 
-function Stores(minCustHour, maxCustHour, averageCookies,) {
+
+function store(minCustHour, maxCustHour, averageSalesPerHourByLocation, averageSalesPerHourAllLocations, totalDaySalesByLocation, totalDaySalesAllLocations) {
   this.minCustHour = minCustHour;
   this.maxCustHour = maxCustHour; 
   this.averageCookies = averageCookies;
+  this.averageSalesPerHourAllLocations = averageSalesPerHourAllLocations;
+  this.totalDaySalesByLocation = totalDaySalesByLocation;
+  this.totalDaySalesAllLocations = totalDaySalesAllLocations;
+  allStores.push(store);
+}
+
+storeAverageCust: function() {
+  return Math.round(Math.random() * (this.maxCustHour - this.minCustHour) + this.minCustHour);
+pikeTotalCookies: function() {
+  return Math.round(this.pikeAverageCust() * this.averageCookies);
+  
+
+  
+
+
 }
 
 Stores.prototype.renderRow = function () 
