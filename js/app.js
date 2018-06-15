@@ -2,9 +2,10 @@
 // variable to hold array of functions created later in code
 var allStores = [];
 //hours the stores are open, kept as global variable
-var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var storeHours = [' ', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 //links table created here to table listed in html
 var cookieTable = document.getElementById('stores');
+var storeLocations = ['1st and Pike', 'SeaTac Airport', 'Seattle Center', 'Capital Hill', 'Alki'];
 
 
 
@@ -75,6 +76,19 @@ function header() {
   }
 }
 
+function storeTableLables() {
+  for (var i = 0; i < storeLocations.length; i++) {
+    var trElement = document.createElement('tr');
+    cookieTable.appendChild(trElement);
+    var tdElement = document.createElement('td');
+    tdElement.textContent = storeLocations[i];
+    trElement.appendChild(tdElement);
+
+  }
+
+
+}
+
 /* tdElement = document.createElement('td');
   tdElement.textContent = this.maxCustHour;
   trElement.appendChild(tdElement);
@@ -88,6 +102,7 @@ function header() {
   storesTable.appendChild(trElement); */
 
 
+storeTableLables();
 header();
 pikeStore.renderRow();
 seaTacStore.renderRow();
