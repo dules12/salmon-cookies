@@ -11,3 +11,8 @@ main page {
 img {
   height: 50px;
 }
+
+#stores {
+  border: 2px black solid;
+  
+}
