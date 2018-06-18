@@ -4,10 +4,38 @@ body {
   background-color:rgb(119, 205, 255);
 }
 
-main page {
-  color: rgb(204, 0, 153);
+
+  
+
+
+
+
+body {
+  font-family: 'halvetica', Times, serif;
 }
 
-img {
-  height: 50px;
+header {
+  background: rgb(77, 65, 65);
+  height: 100px;
 }
+
+#header li {
+  float: left;
+  color: #fff;
+  margin-right: 80px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+#header {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#header img {
+  float: right;
+  margin-top: 15px;
+  margin-right: 30px;
+}
+
+
